@@ -52,10 +52,57 @@
 
 //
 
-let confirma = prompt("¿Querés comprar? Respondé 'Sí'.")
+// let confirma = prompt("¿Querés comprar? Respondé 'sí'.")
 
-if (confirma.toLowerCase() == "si") {
-    alert("Su compra fue confirmada.")
+// if (confirma.toLowerCase() == "sí") {
+//     alert("Su compra fue confirmada.")
+// }
+
+
+// // Normalizar nombre
+
+// let nombre = "    soFíA"
+
+// const normalizarNombre = (nombre) => {
+//     let nombreSinEspacios = nombre.trim()
+//     let primeraLetraDelNombre = nombreSinEspacios.charAt(0)
+//     let primeraLetraEnMayuscula = primeraLetraDelNombre.toUpperCase()
+//     let restoDelNombre = nombreSinEspacios.slice(1, nombre.length)
+//     let restoEnMinuscula = restoDelNombre.toLowerCase()
+//     let nombreNormalizado = primeraLetraEnMayuscula + restoEnMinuscula
+//     return nombreNormalizado
+// }
+
+// console.log("Hola, " + normalizarNombre(nombre) + ".")
+// console.log(normalizarNombre("    soFía"))
+// console.log(normalizarNombre("MIKE     "))
+
+
+// 
+
+const nombre = "Sofía"
+
+console.log(nombre.includes("of"))
+
+console.log(nombre.indexOf("a"))
+
+console.log(nombre.replace("f", "l"))
+
+console.log(nombre.replace(/Sofía/g, "Victoria"))
+
+
+const burlarse = (str) => {
+    let reemplazoLaA = str.replace(/a/g, "i")
+    let reemplazoLaE = reemplazoLaA.replace(/e/g, "i")
+    let reemplazoLaO = reemplazoLaE.replace(/o/g, "i")
+    return reemplazoLaO
 }
 
-confirma()
+console.log(burlarse("programar es difícil"))
+
+const burlarse2 = (str) => {
+    let burla = str.replace(/[aeiou]/g, "i")
+    return burla
+}
+
+console.log(burlarse2("programar es difícil"))
